@@ -22,5 +22,7 @@ public class Wallet {
     UUID walletId;
     long account;
 
+    Long version;
+
 
 }

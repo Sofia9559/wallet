@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class WalletConverter {
     public Wallet convertFromDTO(WalletDTO dto) {
-        return new Wallet(dto.getWalletId(), dto.getAccount());
+        return new Wallet(dto.getWalletId(), dto.getAccount(), null);
     }
 
     public WalletDTO convertToDTO(Wallet wallet) {

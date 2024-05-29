@@ -32,7 +32,7 @@ public class WalletController {
     }
 
     @PostMapping("/api/v1/wallet")
-    public WalletDTO changeWallet(@RequestBody ChangeWalletAccountDTO changeWalletAccountDTO) {
+    public WalletDTO changeWallet(@RequestBody ChangeWalletAccountDTO changeWalletAccountDTO) throws InterruptedException {
         return walletConverter.convertToDTO(
                 walletService.changeWallet(
                         changeWalletAccountConverter.convertFromDTO(changeWalletAccountDTO)
